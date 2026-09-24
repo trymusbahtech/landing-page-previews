@@ -89,6 +89,9 @@ h1 {
 
 .logo-wrap img { width: 100%; height: 100%; object-fit: cover; display: block; }
 
+.project-card.cat-houses .logo-wrap { background: #0b8490; }
+.project-card.cat-houses .logo-wrap img { object-fit: contain; padding: 14px; }
+
 .status { color: var(--mint); font-size: 14px; font-weight: 700; }
 .status i { display: inline-block; width: 7px; height: 7px; margin-left: 7px; border-radius: 50%; background: var(--mint); box-shadow: 0 0 0 5px rgba(155,217,209,.11); }
 .project-card h2 { margin: 10px 0 7px; font-size: clamp(26px, 4vw, 38px); }
