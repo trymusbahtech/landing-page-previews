@@ -13,6 +13,7 @@ A public gallery of tailored landing-page concepts for prospective clients.
 - `docs/aman-delta/` — Aman Delta multi-branch veterinary clinic concept
 - `docs/life-touch/` — Life Touch care and pet-boarding concept
 - `docs/pet-valley/` — Pet Valley care, grooming and boarding concept
+- `docs/zovex/` — Zovex Animal Health corporate and veterinary products concept
 
 The site is published with GitHub Pages from the `docs` directory.
 
