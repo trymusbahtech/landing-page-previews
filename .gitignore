@@ -1,3 +1,4 @@
 *.xlsx
 ~$*
 .site-archive.*
+outreach/
