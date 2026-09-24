@@ -6,6 +6,7 @@ A public gallery of tailored landing-page concepts for prospective clients.
 
 - `docs/index.html` — preview gallery
 - `docs/mao-vet/` — Mao Veterinary Clinic concept
+- `docs/salam-pets/` — Salam Pets Clinics concept
 
 The site is published with GitHub Pages from the `docs` directory.
 

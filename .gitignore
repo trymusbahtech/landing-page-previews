@@ -2,3 +2,5 @@
 ~$*
 .site-archive.*
 outreach/
+.workbook-tools/
+outputs/
