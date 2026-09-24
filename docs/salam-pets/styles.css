@@ -39,7 +39,7 @@ a { color: inherit; }
 .hero { position: relative; isolation: isolate; min-height: 720px; overflow: hidden; background: #dbeaf2; }
 .hero-photo { position: absolute; z-index: -2; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center; }
 .hero-overlay { position: absolute; z-index: -1; inset: 0; background: linear-gradient(90deg, rgba(246,251,254,.98) 0%, rgba(246,251,254,.94) 32%, rgba(246,251,254,.46) 52%, rgba(246,251,254,0) 73%); }
-.hero-inner { display: flex; min-height: 720px; align-items: center; justify-content: flex-end; direction: ltr; }
+.hero-inner { display: flex; min-height: 720px; align-items: center; justify-content: flex-start; direction: ltr; }
 .hero-card { width: min(570px, 52%); direction: rtl; text-align: right; }
 .location-chip { display: inline-flex; align-items: center; gap: 8px; padding: 9px 14px; border: 1px solid rgba(23,62,105,.15); border-radius: 999px; background: rgba(255,255,255,.72); color: var(--navy); font-size: 13px; font-weight: 800; backdrop-filter: blur(8px); }
 .location-chip svg { width: 16px; fill: currentColor; }
@@ -192,20 +192,25 @@ a { color: inherit; }
   html { scroll-padding-top: 90px; }
   .container { width: min(100% - 32px,1180px); }
   .concept-note { font-size: 10px; }
-  .nav-row { min-height: 72px; }
-  .brand img { width: 47px; height: 47px; }
+  .nav-row { position: relative; min-height: 72px; justify-content: flex-start; gap: 12px; direction: ltr; }
+  .brand { position: absolute; top: 50%; right: 0; width: 190px; max-width: calc(100% - 70px); min-width: 0; justify-content: flex-end; margin-left: 0; direction: ltr; transform: translateY(-50%); }
+  .brand img { width: 47px; height: 47px; flex: 0 0 47px; }
+  .brand img { order: 2; }
+  .brand span { min-width: 0; direction: rtl; order: 1; text-align: right; }
+  .brand b { display: block; overflow: hidden; font-size: 16px; text-overflow: ellipsis; white-space: nowrap; }
   .brand small, .nav-contact { display: none; }
-  .menu-button { display: block; order: 3; }
+  .menu-button { display: block; flex: 0 0 44px; }
   .main-nav { position: absolute; top: calc(100% + 1px); right: 16px; left: 16px; display: none; flex-direction: column; align-items: stretch; gap: 0; padding: 8px; border: 1px solid var(--line); border-radius: 18px; background: white; box-shadow: 0 20px 50px rgba(23,62,105,.18); }
   .main-nav.open { display: flex; }
   .main-nav a { padding: 13px 14px; border-radius: 10px; font-size: 14px; }
   .main-nav a:hover { background: var(--sky); }
   .main-nav a::after { display: none; }
-  .hero, .hero-inner { min-height: 710px; }
-  .hero-photo { object-position: 65% center; }
-  .hero-overlay { background: linear-gradient(0deg, rgba(246,251,254,.98) 0%, rgba(246,251,254,.93) 52%, rgba(246,251,254,.2) 86%); }
-  .hero-inner { align-items: end; padding-bottom: 56px; }
-  .hero-card { width: 100%; text-align: center; }
+  .hero { min-height: 0; padding-top: 340px; background: #f6fbfe; }
+  .hero-photo { height: 370px; object-position: 70% center; }
+  .hero-overlay { height: 390px; background: linear-gradient(0deg, #f6fbfe 0%, rgba(246,251,254,.78) 18%, rgba(246,251,254,.08) 68%); }
+  .hero-inner { min-height: 0; align-items: start; padding-bottom: 56px; }
+  .hero-card { width: 100%; min-width: 0; text-align: center; }
+  .hero h1 { max-width: 680px; margin-inline: auto; font-size: clamp(44px, 10vw, 64px); line-height: 1.04; letter-spacing: -.045em; }
   .hero-card > p { margin-inline: auto; }
   .hero-actions, .hero-proof { justify-content: center; }
   .action-grid { grid-template-columns: 1fr; }
@@ -224,8 +229,11 @@ a { color: inherit; }
 
 @media (max-width: 560px) {
   .container { width: min(100% - 24px,1180px); }
-  .hero, .hero-inner { min-height: 690px; }
-  .hero h1 { font-size: clamp(46px,14vw,64px); }
+  .hero { padding-top: 292px; }
+  .hero-photo { height: 322px; object-position: 68% center; }
+  .hero-overlay { height: 342px; }
+  .hero-inner { padding-bottom: 47px; }
+  .hero h1 { font-size: clamp(36px,9.5vw,42px); line-height: 1.1; letter-spacing: -.025em; }
   .hero-card > p { font-size: 16px; }
   .hero-actions { flex-direction: column; }
   .hero-actions .button { width: 100%; }
