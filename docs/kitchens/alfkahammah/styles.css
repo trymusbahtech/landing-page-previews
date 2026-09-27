@@ -69,8 +69,11 @@ button { cursor: pointer; }
 
 .home-hero { position: relative; overflow: hidden; color: #fff; background: var(--ink); }
 .home-hero::before { content: ""; position: absolute; width: 700px; height: 700px; right: -420px; top: -430px; border: 1px solid rgba(255, 255, 255, .1); border-radius: 50%; box-shadow: 0 0 0 105px rgba(255, 255, 255, .018), 0 0 0 210px rgba(255, 255, 255, .018); }
-.home-hero-grid { min-height: 735px; display: grid; grid-template-columns: .95fr 1.05fr; align-items: center; gap: 68px; padding-top: 55px; padding-bottom: 76px; }
-.hero-copy { position: relative; z-index: 3; }
+.hero-backdrop { position: absolute; inset: 0; }
+.hero-backdrop::after { content: ""; position: absolute; inset: 0; background: linear-gradient(90deg, rgba(4, 31, 37, .12) 0%, rgba(4, 31, 37, .38) 44%, rgba(4, 31, 37, .94) 100%); }
+.hero-backdrop img { width: 100%; height: 100%; object-fit: cover; object-position: center; }
+.home-hero-grid { position: relative; z-index: 2; min-height: 760px; display: grid; grid-template-columns: 1fr 1fr; align-items: center; gap: 68px; padding-top: 60px; padding-bottom: 84px; }
+.hero-copy { position: relative; z-index: 3; grid-column: 2; max-width: 650px; }
 .hero-copy h1 { max-width: 710px; margin: 22px 0 24px; font-size: clamp(57px, 6.5vw, 94px); font-weight: 800; line-height: 1.02; letter-spacing: -.065em; }
 .hero-copy h1 span { display: block; color: var(--orange); }
 .hero-copy > p { max-width: 590px; margin: 0; color: #b8ced1; font-size: 15px; line-height: 2.05; }
@@ -93,6 +96,7 @@ button { cursor: pointer; }
 .hero-brand-stamp::after { content: "DESIGN • DETAIL • EXECUTION •"; position: absolute; inset: 8px; display: grid; place-items: center; color: var(--blue); border: 1px dashed #bad5d9; border-radius: 50%; font: 700 6px/1 "Manrope", sans-serif; letter-spacing: .08em; }
 .hero-brand-stamp img { width: 83px; height: 83px; object-fit: cover; }
 .hero-index { position: absolute; left: 242px; bottom: 7px; color: #6e979d; font: 700 9px/1 "Manrope", sans-serif; letter-spacing: .22em; }
+.hero-concept-note { position: absolute; z-index: 3; left: 26px; bottom: 21px; padding: 7px 11px; color: rgba(255, 255, 255, .78); border: 1px solid rgba(255, 255, 255, .18); border-radius: 99px; background: rgba(4, 31, 37, .42); backdrop-filter: blur(8px); font-size: 7px; font-weight: 700; }
 
 .channel-bar { position: relative; z-index: 5; margin-top: -1px; color: var(--ink); background: #fff; }
 .channel-grid { display: grid; grid-template-columns: repeat(3, 1fr); }
@@ -130,6 +134,11 @@ button { cursor: pointer; }
 .manifesto-grid { position: relative; display: grid; grid-template-columns: .75fr 1.25fr; gap: 90px; align-items: center; }
 .manifesto-mark { width: 190px; height: 190px; display: grid; place-items: center; border: 1px solid rgba(255, 255, 255, .22); border-radius: 50%; box-shadow: 0 0 0 35px rgba(255, 255, 255, .035), 0 0 0 70px rgba(255, 255, 255, .025); }
 .manifesto-mark img { width: 122px; height: 122px; border-radius: 50%; }
+.manifesto-photo { position: relative; grid-column: 1; grid-row: 1; min-height: 520px; overflow: hidden; margin: 0; border-radius: 28px 145px 28px 28px; box-shadow: 0 30px 75px rgba(1, 32, 40, .26); }
+.manifesto-photo::after { content: ""; position: absolute; inset: 58% 0 0; background: linear-gradient(transparent, rgba(4, 31, 37, .72)); }
+.manifesto-photo img { width: 100%; height: 520px; object-fit: cover; }
+.manifesto-photo figcaption { position: absolute; z-index: 2; right: 22px; bottom: 20px; color: #d9e9eb; font-size: 8px; font-weight: 700; }
+.manifesto-grid > div { grid-column: 2; grid-row: 1; }
 .manifesto h2 { margin: 0; font-size: clamp(45px, 5.5vw, 75px); line-height: 1.2; letter-spacing: -.05em; }
 .manifesto h2 span { color: #ffb27f; }
 .manifesto p { max-width: 660px; margin: 25px 0 0; color: #c9e0e3; font-size: 14px; }
@@ -261,6 +270,7 @@ button { cursor: pointer; }
 .service-photo { position: relative; min-height: 430px; overflow: hidden; }
 .service-photo::after { content: ""; position: absolute; inset: 62% 0 0; background: linear-gradient(transparent, rgba(4, 31, 37, .55)); }
 .service-photo img { width: 100%; height: 100%; object-fit: cover; object-position: 50% 44%; }
+.concept-badge { position: absolute; z-index: 2; right: 18px; bottom: 17px; padding: 7px 11px; color: #fff; border: 1px solid rgba(255, 255, 255, .28); border-radius: 99px; background: rgba(4, 31, 37, .56); backdrop-filter: blur(8px); font-size: 7px; font-weight: 800; }
 .service-panel-copy { display: flex; flex-direction: column; justify-content: center; padding: 52px; }
 .service-number { color: var(--orange); font: 700 10px/1 "Manrope", sans-serif; letter-spacing: .16em; }
 .service-panel h2 { margin: 18px 0 13px; color: var(--ink); font-size: clamp(35px, 4.1vw, 54px); line-height: 1.15; letter-spacing: -.04em; }
@@ -329,7 +339,11 @@ button { cursor: pointer; }
   .mobile-nav .mobile-whatsapp { display: flex; align-items: center; justify-content: center; gap: 9px; margin-top: 10px; padding: 13px; color: #fff; border: 0; border-radius: 13px; background: #1faf62; }
   .mobile-whatsapp img { width: 20px; }
   .home-hero-grid, .inner-hero-grid { grid-template-columns: 1fr; min-height: auto; padding-top: 62px; padding-bottom: 70px; }
-  .home-hero-grid { gap: 52px; }
+  .home-hero-grid { min-height: 720px; align-items: start; gap: 0; padding-top: 78px; padding-bottom: 90px; }
+  .hero-copy { grid-column: auto; max-width: 100%; }
+  .hero-backdrop::after { background: linear-gradient(180deg, rgba(4, 31, 37, .8) 0%, rgba(4, 31, 37, .9) 58%, rgba(4, 31, 37, .72) 100%); }
+  .hero-backdrop img { object-position: 43% center; }
+  .hero-concept-note { left: 15px; bottom: 14px; font-size: 6px; }
   .hero-copy h1 { font-size: clamp(52px, 15vw, 76px); }
   .inner-hero-copy { min-width: 0; }
   .inner-hero-copy h1 { max-width: 100%; font-size: clamp(43px, 11.5vw, 58px); overflow-wrap: anywhere; }
@@ -350,7 +364,10 @@ button { cursor: pointer; }
   .work-card, .work-card:first-child { min-height: 500px; grid-row: auto; }
   .work-card:nth-child(2), .work-card:nth-child(3) { min-height: 420px; }
   .work-footer { align-items: flex-start; flex-direction: column; }
-  .manifesto-grid { grid-template-columns: 1fr; gap: 62px; }
+  .manifesto-grid { grid-template-columns: 1fr; gap: 42px; }
+  .manifesto-photo, .manifesto-grid > div { grid-column: auto; grid-row: auto; }
+  .manifesto-photo, .manifesto-photo img { min-height: 440px; height: 440px; }
+  .manifesto-photo { border-radius: 25px 110px 25px 25px; }
   .manifesto-mark { width: 150px; height: 150px; }
   .manifesto-mark img { width: 95px; height: 95px; }
   .solution-grid { grid-template-columns: 1fr; }
