@@ -97,7 +97,7 @@ button { cursor: pointer; }
 .hero-brand-stamp::after { content: "DESIGN • DETAIL • EXECUTION •"; position: absolute; inset: 8px; display: grid; place-items: center; color: var(--blue); border: 1px dashed #bad5d9; border-radius: 50%; font: 700 6px/1 "Manrope", sans-serif; letter-spacing: .08em; }
 .hero-brand-stamp img { width: 83px; height: 83px; object-fit: cover; }
 .hero-index { position: absolute; left: 242px; bottom: 7px; color: #6e979d; font: 700 9px/1 "Manrope", sans-serif; letter-spacing: .22em; }
-.hero-concept-note { position: absolute; z-index: 3; left: 102px; bottom: 21px; padding: 7px 11px; color: rgba(255, 255, 255, .82); border: 1px solid rgba(255, 255, 255, .18); border-radius: 99px; background: rgba(4, 31, 37, .55); backdrop-filter: blur(8px); font-size: 7px; font-weight: 700; }
+.hero-concept-note { position: absolute; z-index: 3; left: 155px; bottom: 21px; padding: 7px 11px; color: rgba(255, 255, 255, .82); border: 1px solid rgba(255, 255, 255, .18); border-radius: 99px; background: rgba(4, 31, 37, .55); backdrop-filter: blur(8px); font-size: 7px; font-weight: 700; }
 
 .channel-bar { position: relative; z-index: 5; margin-top: -1px; color: var(--ink); background: #fff; }
 .channel-grid { display: grid; grid-template-columns: repeat(3, 1fr); }
