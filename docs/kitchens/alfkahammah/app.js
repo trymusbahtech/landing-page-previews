@@ -53,6 +53,19 @@ document.querySelectorAll('.faq-list details').forEach((item) => {
   });
 });
 
+const siteVideos = [...document.querySelectorAll('video')];
+siteVideos.forEach((currentVideo) => {
+  currentVideo.addEventListener('play', () => {
+    siteVideos.forEach((otherVideo) => {
+      if (otherVideo !== currentVideo) otherVideo.pause();
+    });
+  });
+});
+
+document.addEventListener('visibilitychange', () => {
+  if (document.hidden) siteVideos.forEach((video) => video.pause());
+});
+
 const lightbox = document.querySelector('.lightbox');
 if (lightbox) {
   const lightboxImage = lightbox.querySelector('img');

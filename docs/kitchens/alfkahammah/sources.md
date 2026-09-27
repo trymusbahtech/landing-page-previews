@@ -29,6 +29,17 @@ Checked: 27 September 2026
   - <https://www.instagram.com/reel/DdRgHJjiyCn/>
 - Branch images: official Linktree location thumbnails.
 
+### Video sources
+
+The following videos are public Reels from the official Instagram account. Local MP4 copies were resized, recompressed, and configured for fast-start web playback; the content and original audio remain the property of the account owner:
+
+- `assets/video-storage-tour.mp4` — <https://www.instagram.com/reel/DdhOLclxE-0/>
+- `assets/video-light-kitchen.mp4` — <https://www.instagram.com/reel/DdW7FH9x_8B/>
+- `assets/video-blue-kitchen.mp4` — <https://www.instagram.com/reel/DdUK6fQqvE4/>
+- `assets/video-project-explainer.mp4` — <https://www.instagram.com/reel/DdUKg28i0zm/>
+
+Matching `.webp` poster frames were extracted from those videos for lightweight previews. A Reel containing a time-sensitive price promotion was deliberately excluded from the preview.
+
 ### Concept imagery
 
 The following original AI-generated images are used only as clearly labelled visual concepts. They are not presented as completed client work:

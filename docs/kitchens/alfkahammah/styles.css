@@ -256,6 +256,22 @@ button { cursor: pointer; }
 .portfolio-caption small { color: #c0d2d4; font-size: 8px; }
 .portfolio-caption > span:last-child { width: 43px; height: 43px; display: grid; flex: 0 0 auto; place-items: center; border: 1px solid rgba(255, 255, 255, .38); border-radius: 50%; font-size: 16px; }
 .portfolio-note { display: flex; align-items: center; justify-content: space-between; gap: 30px; margin-top: 24px; color: var(--muted); font-size: 10px; }
+.motion-section { color: #fff; background: var(--ink); }
+.motion-heading { display: grid; grid-template-columns: 1.15fr .85fr; gap: 80px; align-items: end; margin-bottom: 45px; }
+.motion-heading h2 { max-width: 780px; margin: 14px 0 0; font-size: clamp(45px, 5.6vw, 72px); line-height: 1.12; letter-spacing: -.045em; }
+.motion-heading > p { max-width: 470px; margin: 0; color: #b8cbce; font-size: 12px; }
+.motion-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 17px; }
+.motion-card { min-width: 0; overflow: hidden; border: 1px solid rgba(255, 255, 255, .12); border-radius: 27px; background: #061f25; box-shadow: 0 24px 65px rgba(0, 0, 0, .18); }
+.motion-media { position: relative; aspect-ratio: 9 / 16; overflow: hidden; background: #020d10; }
+.motion-media video { width: 100%; height: 100%; display: block; object-fit: cover; background: #020d10; }
+.motion-duration { position: absolute; top: 15px; left: 15px; padding: 6px 10px; pointer-events: none; color: #fff; border: 1px solid rgba(255, 255, 255, .25); border-radius: 99px; background: rgba(4, 31, 37, .72); backdrop-filter: blur(8px); font: 700 8px/1 "Manrope", sans-serif; }
+.motion-copy { padding: 25px 24px 27px; }
+.motion-copy > span { color: #ffad78; font: 700 8px/1 "Manrope", sans-serif; letter-spacing: .15em; }
+.motion-copy h3 { margin: 13px 0 10px; font-size: 23px; line-height: 1.35; }
+.motion-copy p { min-height: 67px; margin: 0; color: #9fbbc0; font-size: 10px; }
+.motion-copy a { min-height: 44px; display: inline-flex; align-items: center; gap: 9px; margin-top: 13px; color: #e7f1f2; font-size: 9px; font-weight: 800; }
+.motion-copy a b { color: var(--orange); font-size: 15px; }
+.motion-note { margin: 23px 0 0; color: #78989e; font-size: 8px; }
 .lightbox { width: min(920px, calc(100% - 32px)); max-height: 92vh; padding: 0; overflow: hidden; border: 0; border-radius: 24px; background: #041f25; box-shadow: 0 35px 100px rgba(0, 0, 0, .45); }
 .lightbox::backdrop { background: rgba(2, 18, 22, .88); backdrop-filter: blur(8px); }
 .lightbox img { width: 100%; max-height: 78vh; object-fit: contain; background: #041f25; }
@@ -278,6 +294,17 @@ button { cursor: pointer; }
 .service-panel p { max-width: 570px; margin: 0; color: var(--muted); font-size: 12px; }
 .service-tags { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 25px; }
 .service-tags span { padding: 8px 12px; color: var(--ink); border-radius: 99px; background: var(--paper); font-size: 8px; font-weight: 800; }
+.walkthrough-section { background: #fff; }
+.walkthrough-layout { display: grid; grid-template-columns: .78fr 1.22fr; gap: 90px; align-items: center; }
+.walkthrough-media { position: relative; justify-self: start; width: min(100%, 430px); overflow: hidden; border-radius: 28px 150px 28px 28px; background: var(--ink); box-shadow: var(--shadow); }
+.walkthrough-media video { width: 100%; aspect-ratio: 9 / 16; display: block; object-fit: cover; background: #020d10; }
+.walkthrough-media > span { position: absolute; right: 17px; bottom: 17px; padding: 7px 11px; pointer-events: none; color: #fff; border: 1px solid rgba(255, 255, 255, .24); border-radius: 99px; background: rgba(4, 31, 37, .68); backdrop-filter: blur(8px); font-size: 7px; font-weight: 800; }
+.walkthrough-copy h2 { max-width: 650px; margin: 15px 0 20px; color: var(--ink); font-size: clamp(43px, 5vw, 67px); line-height: 1.16; letter-spacing: -.045em; }
+.walkthrough-copy > p { max-width: 630px; margin: 0; color: var(--muted); font-size: 12px; }
+.walkthrough-copy ul { display: grid; gap: 10px; margin: 30px 0 0; padding: 0; list-style: none; }
+.walkthrough-copy li { min-height: 58px; display: flex; align-items: center; gap: 15px; padding: 10px 14px; border: 1px solid var(--line); border-radius: 15px; color: var(--ink); background: var(--paper); font-size: 11px; font-weight: 800; }
+.walkthrough-copy li span { width: 34px; height: 34px; flex: 0 0 auto; display: grid; place-items: center; color: var(--orange); border-radius: 50%; background: #fff; font: 800 8px/1 "Manrope", sans-serif; }
+.walkthrough-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 18px; margin-top: 29px; }
 
 .brief-section { color: #fff; background: var(--blue); }
 .brief-grid { display: grid; grid-template-columns: .82fr 1.18fr; gap: 90px; align-items: center; }
@@ -388,10 +415,17 @@ button { cursor: pointer; }
   .portfolio-grid { grid-template-columns: 1fr; grid-auto-rows: auto; }
   .portfolio-card, .portfolio-card:nth-child(n) { grid-column: auto; grid-row: auto; min-height: 510px; }
   .portfolio-note { align-items: flex-start; flex-direction: column; }
+  .motion-heading { grid-template-columns: 1fr; gap: 22px; }
+  .motion-grid { grid-template-columns: 1fr; }
+  .motion-card { display: grid; grid-template-columns: .82fr 1.18fr; align-items: center; }
+  .motion-media { aspect-ratio: 9 / 15; }
+  .motion-copy p { min-height: 0; }
   .service-panel, .service-panel:nth-child(even) { grid-template-columns: 1fr; }
   .service-panel:nth-child(even) .service-photo { order: 0; }
   .service-photo { min-height: 480px; }
   .service-panel-copy { padding: 38px 27px 43px; }
+  .walkthrough-layout { grid-template-columns: 1fr; gap: 48px; }
+  .walkthrough-media { justify-self: center; width: min(100%, 480px); }
   .branch-entry { grid-template-columns: 1fr; padding: 15px; }
   .branch-photo { height: 260px; }
   .branch-copy { padding: 5px 8px; }
@@ -423,6 +457,11 @@ button { cursor: pointer; }
   .inner-visual .photo-a { left: 57px; }
   .inner-visual .photo-b { width: 155px; height: 215px; }
   .portfolio-card, .portfolio-card:nth-child(n) { min-height: 460px; }
+  .motion-card { display: block; }
+  .motion-media { aspect-ratio: 9 / 14; }
+  .motion-heading h2 { font-size: clamp(39px, 11vw, 54px); }
+  .walkthrough-media { border-radius: 23px 100px 23px 23px; }
+  .walkthrough-actions { display: grid; }
   .service-photo { min-height: 420px; }
   .branch-actions { display: grid; }
   .floating-whatsapp { width: 60px; height: 60px; justify-content: center; padding: 0; left: 13px; bottom: 13px; }
