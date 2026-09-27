@@ -4,6 +4,8 @@ A public gallery of tailored landing-page concepts for prospective clients.
 
 ## Structure
 
+- `docs/auto-care/<slug>/` — automotive protection and detailing concepts
+- `outreach/auto-care/` — automotive prospect research and outreach notes
 - `docs/index.html` — preview gallery
 - `docs/mao-vet/` — Mao Veterinary Clinic concept
 - `docs/salam-pets/` — Salam Pets Clinics concept
@@ -16,6 +18,12 @@ A public gallery of tailored landing-page concepts for prospective clients.
 - `docs/zovex/` — Zovex Animal Health corporate and veterinary products concept
 
 The site is published with GitHub Pages from the `docs` directory.
+
+Automotive concepts use their own public namespace:
+
+`https://trymusbahtech.github.io/landing-page-previews/auto-care/<slug>/`
+
+The existing veterinary URLs stay at their current root paths so previously sent links remain unchanged.
 
 ## Important
 
