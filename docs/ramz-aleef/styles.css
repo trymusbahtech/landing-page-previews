@@ -1,6 +1,6 @@
 :root { --purple:#5b328f; --deep:#241239; --yellow:#ffc526; --cream:#fffaf0; --ink:#20182a; --muted:#756d7c; --line:rgba(36,18,57,.12); --shadow:0 28px 80px rgba(46,24,65,.15); }
 * { box-sizing:border-box; }
-html { scroll-behavior:smooth; scroll-padding-top:110px; }
+html { scroll-behavior:smooth; scroll-padding-top:88px; }
 body { margin:0; overflow-x:hidden; background:#fff; color:var(--ink); font-family:"Tajawal",system-ui,sans-serif; -webkit-font-smoothing:antialiased; }
 img { display:block; max-width:100%; }
 a { color:inherit; }

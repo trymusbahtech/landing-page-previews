@@ -289,7 +289,7 @@ html.motion [data-reveal].visible { opacity: 1; transform: none; }
   .brand-copy strong { font-size: .83rem; }
   .desktop-nav, .header-action { display: none; }
   .menu-toggle { display: grid; }
-  .mobile-nav { position: fixed; z-index: 39; inset: 106px 0 auto; display: grid; padding: 18px 20px; border-bottom: 1px solid var(--line); background: var(--surface); box-shadow: 0 25px 60px rgba(0,0,0,.15); opacity: 0; visibility: hidden; transform: translateY(-12px); transition: .25s; }
+  .mobile-nav { position: fixed; z-index: 39; inset: 72px 0 auto; display: grid; padding: 18px 20px; border-bottom: 1px solid var(--line); background: var(--surface); box-shadow: 0 25px 60px rgba(0,0,0,.15); opacity: 0; visibility: hidden; transform: translateY(-12px); transition: .25s; }
   .mobile-nav.open { opacity: 1; visibility: visible; transform: none; }
   .mobile-nav a { padding: 12px 5px; border-bottom: 1px solid var(--line); font-size: .85rem; font-weight: 700; }
   .mobile-nav a[aria-current="page"] { color: var(--accent); }
